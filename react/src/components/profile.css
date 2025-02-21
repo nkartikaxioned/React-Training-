@@ -1,0 +1,8 @@
+ul {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-style {
+  box-shadow: 5px 10px 3px lightblue;
+}

@@ -1,0 +1,27 @@
+[
+  {
+    "id" : "student_1",
+    "name" : "abc",
+    "school" : "abc high school"
+  },
+  {
+    "id" : "student_2",
+    "name" : "bcd",
+    "school" : "bcd high school"
+  },
+  {
+    "id" : "student_3",
+    "name" : "cde",
+    "school" : "cde high school"
+  },
+  {
+    "id" : "student_4",
+    "name" : "def",
+    "school" : "def high school"
+  },
+  {
+    "id" : "student_5",
+    "name" : "efg",
+    "school" : "efg high school"
+  }
+]

@@ -1,0 +1,27 @@
+[
+  {
+    "id" : "profile_1",
+    "name" : "abc",
+    "social" : "facebook"
+  },
+  {
+    "id" : "profile_2",
+    "name" : "bcd",
+    "social" : "google chat"
+  },
+  {
+    "id" : "profile_3",
+    "name" : "cde",
+    "social" : "instagram"
+  },
+  {
+    "id" : "profile_4",
+    "name" : "def",
+    "social" : "twitter"
+  },
+  {
+    "id" : "profile_5",
+    "name" : "efg",
+    "social" : "snapchat"
+  }
+]
