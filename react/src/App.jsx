@@ -5,13 +5,14 @@ import React from "react";
 // import { GetProfile } from "./components/profile";
 // import "./components/profile.css";
 // import "./components/profile.module.css"
-import { EventHandling } from "./components/eventHandling";
+// import { EventHandling } from "./components/eventHandling";
+import { EventsProp } from "./components/eventsProp";
 
 export const App = () => {
 
   return (
     <>
-      <EventHandling />
+      <EventsProp />
     </>
   )
 };
