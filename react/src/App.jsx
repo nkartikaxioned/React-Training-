@@ -1,16 +1,17 @@
 import React from "react";
-import { Test } from "./components/propsLearning";
+// import { Test } from "./components/propsLearning";
 // import { StateFunction, UserName } from "./components/stateLearning";
 // import { StudentsList } from "./components/studentsList";
-import { GetProfile } from "./components/profile";
-import "./components/profile.css";
-import "./components/profile.module.css"
+// import { GetProfile } from "./components/profile";
+// import "./components/profile.css";
+// import "./components/profile.module.css"
+import { EventHandling } from "./components/eventHandling";
 
 export const App = () => {
 
   return (
     <>
-      <GetProfile />
+      <EventHandling />
     </>
   )
 };
