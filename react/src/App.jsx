@@ -6,13 +6,14 @@ import React from "react";
 // import "./components/profile.css";
 // import "./components/profile.module.css"
 // import { EventHandling } from "./components/eventHandling";
-import { EventsProp } from "./components/eventsProp";
+// import { EventsProp } from "./components/eventsProp";
+import { EventPropagation } from "./components/eventPropagation";
 
 export const App = () => {
 
   return (
     <>
-      <EventsProp />
+      <EventPropagation />
     </>
   )
 };
