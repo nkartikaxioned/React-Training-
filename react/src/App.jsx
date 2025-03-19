@@ -8,13 +8,13 @@ import React from "react";
 // import { EventHandling } from "./components/eventHandling";
 // import { EventsProp } from "./components/eventsProp";
 // import { EventPropagation } from "./components/eventPropagation";
-import { State } from "./components/Hooks/state";
+import { DerivedState } from "./components/Hooks/hooksPractise";
 
 export const App = () => {
 
   return (
     <>
-      <State />
+      <DerivedState />
     </>
   )
 };
