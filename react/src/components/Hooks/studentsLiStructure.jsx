@@ -1,9 +1,9 @@
-export const StudentLiStructure = (props) => {
+export const StudentLiStructure = ({students}) => {
   return (
     <>
-      {props.students.map((student) => (
-        <li key={student.sid}>
-          {student.sname} - Age: {student.age}
+      {students.map(({sid, sname, age}) => (
+        <li key={sid}>
+          {sname} - Age: {age}
         </li>
       ))}
     </>
