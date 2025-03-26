@@ -10,13 +10,14 @@ import React from "react";
 // import { EventPropagation } from "./components/eventPropagation";
 // import { DerivedState } from "./components/Hooks/hooksPractise";
 // import { StudentsList } from "./components/Hooks/useStatePractise";
-import { StateLifting } from "./components/stateLifting";
+// import { StateLifting } from "./components/stateLifting";
+import { ToggleSwitch } from "./components/toggleSwitch/toggleSwitch";
 
 export const App = () => {
 
   return (
     <>
-      <StateLifting />
+      <ToggleSwitch />
     </>
   )
 };
