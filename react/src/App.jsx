@@ -9,13 +9,14 @@ import React from "react";
 // import { EventsProp } from "./components/eventsProp";
 // import { EventPropagation } from "./components/eventPropagation";
 // import { DerivedState } from "./components/Hooks/hooksPractise";
-import { StudentsList } from "./components/Hooks/useStatePractise";
+// import { StudentsList } from "./components/Hooks/useStatePractise";
+import { StateLifting } from "./components/stateLifting";
 
 export const App = () => {
 
   return (
     <>
-      <StudentsList />
+      <StateLifting />
     </>
   )
 };
