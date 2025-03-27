@@ -1,4 +1,5 @@
 import React from "react";
+import { TodoComponent } from "./Todo-Project/todo";
 // import { Test } from "./components/propsLearning";
 // import { StateFunction, UserName } from "./components/stateLearning";
 // import { StudentsList } from "./components/studentsList";
@@ -11,14 +12,15 @@ import React from "react";
 // import { DerivedState } from "./components/Hooks/hooksPractise";
 // import { StudentsList } from "./components/Hooks/useStatePractise";
 // import { StateLifting } from "./components/stateLifting";
-import { ToggleSwitch } from "./components/toggleSwitch/toggleSwitch";
+// import { ToggleSwitch } from "./components/toggleSwitch/toggleSwitch";
+
 
 export const App = () => {
 
   return (
-    <>
-      <ToggleSwitch />
-    </>
+    <section>
+      <TodoComponent />
+    </section>
   )
 };
 
