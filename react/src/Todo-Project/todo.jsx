@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./todo.css";
+import { TodoInputStructure } from "./todoStructure";
 
 export const TodoComponent = () => {
   const [inputValue, setInputValue] = useState("");
@@ -18,41 +19,33 @@ export const TodoComponent = () => {
     setInputValue("");
   }
 
+  const handleClear = () => {
+    setToDoArray([]);
+  }
+
+  const handleDelete = (index) => {
+    setToDoArray((prev) => prev.filter((_, i) => i !== index));
+  };
+
+  const handleCheck = (e) => {
+    let parentElement = e.target.parentElement;
+    if(!parentElement.classList.contains('checked')) {
+      parentElement.classList.add('checked');
+    } else {
+      parentElement.classList.remove('checked')
+    }
+  }
+  
 
   return (
   <TodoInputStructure 
   inputValue={inputValue} 
   handleChangeInput={handleChangeInput} 
   handleFormSubmit={handleFormSubmit} 
-  todoArray={todoArray}/>
+  todoArray={todoArray}
+  handleClear = {handleClear} 
+  handleDelete = {handleDelete}  
+  handleCheck = {handleCheck}/>
   );
 }
 
-export const TodoInputStructure = ({inputValue, handleChangeInput, handleFormSubmit, todoArray}) => {
-  return (
-      <div className="form-container">
-        <form onSubmit = {handleFormSubmit}>
-          <div className="container">
-            <input 
-            type="text" 
-            autoComplete="off" 
-            value={inputValue} 
-            onChange={(e) => {handleChangeInput(e.target.value)}}
-            />
-            <button className="btn" type="submit">Add Todo</button>
-          </div>
-          <ul className="display-container">
-            {todoArray.map((currentToDo, index) => {
-              return (
-                <li key={index}>
-                  <p>{currentToDo}</p>
-                  <button className="btn">Check</button>
-                  <button className="btn">Delete</button>
-                </li>
-              );
-            })}
-          </ul>
-        </form>
-      </div>
-  );
-}
