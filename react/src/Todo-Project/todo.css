@@ -102,3 +102,53 @@ li {
 *::after {
   box-sizing: border-box;
 }
+
+.container,
+.root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section {
+  max-width: 700px;
+  margin: 0 auto;
+  background-color: antiquewhite;
+  border: 1.5px solid black;
+  border-radius: 25px;
+}
+
+form { padding: 20px; }
+
+form input {
+  padding: 5px 10px;
+  border: 2px solid black;
+  margin-right: 8px;
+  border-radius: 15px;
+  outline: none;
+}
+
+.container { margin-bottom: 20px; }
+
+button.btn {
+  padding: 5px 8px;
+  border: 2px solid grey;
+  border-radius: 15px;
+  outline: none;
+}
+
+.display-container button { display: inline-block; }
+
+.display-container li { 
+  width: 80%; 
+  padding: 10px;
+  margin: 0 auto;
+  margin-bottom: 15px;
+  border-radius: 20px;
+  display: flex; 
+  flex-direction: row;
+  align-items: center;
+  background-color: cornflowerblue;
+}
+
+.display-container p { width: 60%; }
