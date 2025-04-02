@@ -1,5 +1,6 @@
 import React from "react";
-import { TodoComponent } from "./Todo-Project/todo";
+// import { TodoComponent } from "./Todo-Project/todo";
+import { Weather } from "./weather-app/weather";
 // import { Test } from "./components/propsLearning";
 // import { StateFunction, UserName } from "./components/stateLearning";
 // import { StudentsList } from "./components/studentsList";
@@ -19,7 +20,7 @@ export const App = () => {
 
   return (
     <section>
-      <TodoComponent />
+      <Weather />
     </section>
   )
 };
