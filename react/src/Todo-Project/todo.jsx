@@ -2,9 +2,14 @@ import { useState } from "react";
 import "./todo.css";
 import { TodoInputStructure } from "./todoStructure";
 
+const toDoKey = "TodoArray";
 export const TodoComponent = () => {
   const [inputValue, setInputValue] = useState("");
-  const [todoArray, setToDoArray] = useState([]);
+  const [todoArray, setToDoArray] = useState(() => {
+    const localTodo = localStorage.getItem(toDoKey);
+    return localTodo ? JSON.parse(localTodo) : [];
+  });
+
   const handleChangeInput = (value) => setInputValue(value);
 
   const handleFormSubmit = (e) => {
@@ -36,6 +41,7 @@ export const TodoComponent = () => {
     }
   }
   
+  localStorage.setItem(toDoKey, JSON.stringify(todoArray));
 
   return (
   <TodoInputStructure 
