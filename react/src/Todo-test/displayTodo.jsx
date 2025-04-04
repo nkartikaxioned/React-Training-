@@ -9,10 +9,10 @@ export const DisplayTodo = ({todoArray}) => {
             <input type="checkbox" />
             <p>{todo}</p>
             <div>
-              <button>Delete</button>
+              <button className="btn">Delete</button>
             </div>
             <div>
-              <button>Edit</button>
+              <button className="btn">Edit</button>
             </div>
           </li>
         );

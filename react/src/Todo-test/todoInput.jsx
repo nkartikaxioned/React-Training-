@@ -26,7 +26,7 @@ export const TodoInput = ({todoValue, setTodoValue, todoArray, setTodoArray}) =>
         autoComplete="off"/>
       </div>
       <div>
-        <button type="submit">Set Task</button>
+        <button className="btn" type="submit">Set Task</button>
       </div>
     </form>
   )

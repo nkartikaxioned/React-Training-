@@ -18,9 +18,10 @@ const [isVisible, setIsVisible] = useState(false);
 localStorage.setItem(listKey, JSON.stringify(todoArray));
   return (
     <div>
+      <h1>TODO LIST</h1>
       <div>
         <div>
-          <button onClick={() => {setIsVisible(!isVisible)}}>Add Task</button>
+          <button className="btn" onClick={() => {setIsVisible(!isVisible)}}>Add Task</button>
         </div>
         <select name="" id="">
           <option value="all" defaultChecked>ALL</option>
