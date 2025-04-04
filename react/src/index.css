@@ -105,3 +105,5 @@ h1 { @apply text-6xl font-bold text-gray-600 }
 section { @apply bg-indigo-100/40 h-screen}
 .btn { @apply px-4 py-2.5 rounded-sm bg-indigo-400 text-white duration-300 ease-linear }
 .btn:hover { @apply bg-indigo-300   }
+ul { @apply bg-gray-200 max-w-3/5 flex flex-wrap flex-col gap-7 p-7 rounded-2xl}
+li { @apply bg-white rounded-[4px] flex p-3 items-center}
