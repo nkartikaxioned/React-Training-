@@ -109,3 +109,4 @@ ul { @apply bg-gray-200 max-w-4xl w-5/12 flex flex-wrap flex-col gap-7 p-7 round
 li { @apply bg-white rounded-[4px] flex p-3 items-center justify-between}
 input[type="checkbox"] { @apply h-5 w-5 self-center }
 select { @apply bg-gray-300 rounded p-2.5 }
+svg { display: inline-block; }

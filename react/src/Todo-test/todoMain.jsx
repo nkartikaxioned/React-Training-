@@ -1,8 +1,7 @@
 import { useState } from "react"
 import { TodoInput } from "./todoInput"
 import { DisplayTodo } from "./displayTodo";
-
-
+import { IoIosAddCircleOutline } from "react-icons/io";
 
 const listKey = "TodoListKey";
 export const TodoMain = () => {
@@ -53,7 +52,7 @@ localStorage.setItem(listKey, JSON.stringify(todoArray));
       <h1>TODO LIST</h1>
       <div className="flex flex-row justify-between w-4/12 max-w-4xl mb-5!">
         <div>
-          <button className="btn" onClick={() => {setIsVisible(!isVisible)}}>Add Task</button>
+          <button className="btn" onClick={() => {setIsVisible(!isVisible)}}>Add Task <IoIosAddCircleOutline size={18}/></button>
         </div>
         <select
           value={filterStatus}

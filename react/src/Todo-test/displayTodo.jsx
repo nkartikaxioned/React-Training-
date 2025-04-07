@@ -1,3 +1,8 @@
+import { MdOutlineModeEdit } from "react-icons/md";
+import { MdOutlineDeleteForever } from "react-icons/md";
+import { GiCancel } from "react-icons/gi";
+
+
 export const DisplayTodo = ({todoArray, setTodoArray, isEditId, setIsEditId, editValue, setEditValue, getFormatedDate}) => {
 
   const isChecked = "line-through font-bold! text-[18px]!",
@@ -19,6 +24,10 @@ export const DisplayTodo = ({todoArray, setTodoArray, isEditId, setIsEditId, edi
 
   const handleEditChange = (value) => {
     setEditValue(value);
+  }
+
+  const handleCancelUpdate = (id) => {
+    setIsEditId("");
   }
 
   const handleUpdate = (editValue) => {
@@ -52,7 +61,10 @@ export const DisplayTodo = ({todoArray, setTodoArray, isEditId, setIsEditId, edi
                 value={editValue}
                 onChange={(e)=> {handleEditChange(e.target.value)}}
                 />
-                <button className="btn" onClick={(e) => {handleUpdate(editValue)}}>Update Todo</button>
+                <div>
+                  <button className="btn" onClick={(e) => {handleUpdate(editValue)}}>Update Todo</button>
+                  <button className="btn ml-2!" title="Cancel Update" onClick={(e) => {handleCancelUpdate(todo.id)}}><GiCancel size={20}/></button>
+                </div>
               </div>
             ) : (
               <>
@@ -67,10 +79,10 @@ export const DisplayTodo = ({todoArray, setTodoArray, isEditId, setIsEditId, edi
                 </div>
                 <div className="flex flex-row gap-1.5">
                   <div>
-                    <button className="btn" onClick={(e)=> {handleDeleteTodo(todo.id)}}>Delete</button>
+                    <button className="btn" onClick={(e)=> {handleDeleteTodo(todo.id)}}><MdOutlineDeleteForever size={20}/></button>
                   </div>
                   <div>
-                    <button className="btn" onClick={(e)=>{handleEdit(todo.id)}} >Edit</button>
+                    <button className="btn" onClick={(e)=>{handleEdit(todo.id)}} ><MdOutlineModeEdit size={20}/></button>
                   </div>
                 </div>
               </>

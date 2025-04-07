@@ -1,3 +1,5 @@
+import { FaRegNoteSticky } from "react-icons/fa6";
+
 export const TodoInput = ({todoValue, setTodoValue, todoArray, setTodoArray, getFormatedDate}) => {
 
   const handleTodoValue = (value) => {
@@ -34,7 +36,7 @@ export const TodoInput = ({todoValue, setTodoValue, todoArray, setTodoArray, get
         autoComplete="off"/>
       </div>
       <div className="ml-2!">
-        <button className="btn" type="submit">Set Task</button>
+        <button className="btn" type="submit">Set Task <FaRegNoteSticky /></button>
       </div>
     </form>
   )
