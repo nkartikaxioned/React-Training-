@@ -25,14 +25,15 @@ export const TodoInput = ({todoValue, setTodoValue, todoArray, setTodoArray, get
   }
 
   return (
-    <form className="input-component" onSubmit={(e) => {e.preventDefault(); handleTodoSubmit(todoValue);}}>
+    <form className="input-component flex flex-row mb-4!" onSubmit={(e) => {e.preventDefault(); handleTodoSubmit(todoValue);}}>
       <div>
         <input type="text" 
+        className="border p-2.5! rounded"
         value={todoValue.content} 
         onChange={(e) => handleTodoValue(e.target.value)} 
         autoComplete="off"/>
       </div>
-      <div>
+      <div className="ml-2!">
         <button className="btn" type="submit">Set Task</button>
       </div>
     </form>

@@ -16,6 +16,8 @@ const [todoArray, setTodoArray] = useState(() => {
 const [isVisible, setIsVisible] = useState(false);
 const [isEditId, setIsEditId] = useState("");
 const [editValue, setEditValue] = useState("");
+const [filterStatus, setFilterStatus] = useState("all");
+
 
 const getFormatedDate =() => {
   const now = new Date();
@@ -38,16 +40,26 @@ const getFormatedDate =() => {
   return formattedTime; // e.g. "5:21 am 01/02/2025"
 }
 
+const filteredTodos = todoArray.filter((todo) => {
+  if (filterStatus === "checked") return todo.checked;
+  if (filterStatus === "unchecked") return !todo.checked;
+  return true;
+});
+
+
 localStorage.setItem(listKey, JSON.stringify(todoArray));
   return (
-    <div>
+    <div className="h-screen flex flex-col justify-center items-center">
       <h1>TODO LIST</h1>
-      <div>
+      <div className="flex flex-row justify-between w-4/12 max-w-4xl mb-5!">
         <div>
           <button className="btn" onClick={() => {setIsVisible(!isVisible)}}>Add Task</button>
         </div>
-        <select name="" id="">
-          <option value="all" defaultChecked>ALL</option>
+        <select
+          value={filterStatus}
+          onChange={(e) => setFilterStatus(e.target.value)}
+        >
+          <option value="all">ALL</option>
           <option value="checked">Checked</option>
           <option value="unchecked">UnChecked</option>
         </select>
@@ -60,7 +72,7 @@ localStorage.setItem(listKey, JSON.stringify(todoArray));
       getFormatedDate={getFormatedDate}/>}
       <ul>
         <DisplayTodo 
-        todoArray={todoArray} 
+        todoArray={filteredTodos} 
         setTodoArray={setTodoArray}
         isEditId={isEditId} 
         setIsEditId={setIsEditId} 
