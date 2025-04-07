@@ -6,7 +6,7 @@ import { DisplayTodo } from "./displayTodo";
 
 const listKey = "TodoListKey";
 export const TodoMain = () => {
-const [todoValue, setTodoValue] = useState("");
+const [todoValue, setTodoValue] = useState({ id: "", content: "", checked: false, date: "" });
 
 const [todoArray, setTodoArray] = useState(() => {
   const localTodo = localStorage.getItem(listKey);
@@ -35,7 +35,7 @@ localStorage.setItem(listKey, JSON.stringify(todoArray));
       todoArray={todoArray} 
       setTodoArray={setTodoArray}/>}
       <ul>
-        <DisplayTodo todoArray={todoArray}/>
+        <DisplayTodo todoArray={todoArray} setTodoArray={setTodoArray}/>
       </ul>
     </div>
   )

@@ -1,15 +1,29 @@
+export const DisplayTodo = ({todoArray, setTodoArray}) => {
 
-export const DisplayTodo = ({todoArray}) => {
+  const handleDeleteTodo = (id) => {
+    const updatedTodoArray = todoArray.filter((todo) => todo.id !== id)
+    setTodoArray(updatedTodoArray);
+  }
+
+  const handleToggleChecked = (id) => {
+    const checkedTodo = todoArray.map((todo)=> todo.id === id ? {...todo, checked: !todo.checked } : todo)
+    setTodoArray(checkedTodo)
+  }
 
   return (
     <>
-      {todoArray.map((todo, index) => {
+      {todoArray.map((todo) => {
         return (
-          <li key={index}>
-            <input type="checkbox" />
-            <p>{todo}</p>
+          <li key={todo.id}>
+            <input type="checkbox" 
+            checked={todo.checked}
+            onChange={() => handleToggleChecked(todo.id)}/>
             <div>
-              <button className="btn">Delete</button>
+            <p className={todo.checked ? "line-through" : ""}>{todo.content}</p>
+            <p>{todo.date}</p>
+            </div>
+            <div>
+              <button className="btn" onClick={(e)=> {handleDeleteTodo(todo.id)}}>Delete</button>
             </div>
             <div>
               <button className="btn">Edit</button>
