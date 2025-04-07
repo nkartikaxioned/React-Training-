@@ -17,7 +17,7 @@ const [isEditId, setIsEditId] = useState("");
 const [editValue, setEditValue] = useState("");
 const [filterStatus, setFilterStatus] = useState("all");
 
-
+//functionality to get formated date
 const getFormatedDate =() => {
   const now = new Date();
 
@@ -39,6 +39,7 @@ const getFormatedDate =() => {
   return formattedTime; // e.g. "5:21 am 01/02/2025"
 }
 
+// filter functionality 
 const filteredTodos = todoArray.filter((todo) => {
   if (filterStatus === "checked") return todo.checked;
   if (filterStatus === "unchecked") return !todo.checked;

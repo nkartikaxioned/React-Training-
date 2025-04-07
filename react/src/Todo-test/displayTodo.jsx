@@ -8,28 +8,34 @@ export const DisplayTodo = ({todoArray, setTodoArray, isEditId, setIsEditId, edi
   const isChecked = "line-through font-bold! text-[18px]!",
   defaultText = "font-bold! text-[18px]!";
 
+  //delete functionality
   const handleDeleteTodo = (id) => {
     const updatedTodoArray = todoArray.filter((todo) => todo.id !== id)
     setTodoArray(updatedTodoArray);
   }
 
+  //check toggle functionality
   const handleToggleChecked = (id) => {
     const checkedTodo = todoArray.map((todo)=> todo.id === id ? {...todo, checked: !todo.checked } : todo)
     setTodoArray(checkedTodo)
   }
 
+  //function to set isEditId value
   const handleEdit = (id) => {
     setIsEditId(id);
   }
 
+  //function to display User Input
   const handleEditChange = (value) => {
     setEditValue(value);
   }
 
+  //functionality to cancel update
   const handleCancelUpdate = (id) => {
     setIsEditId("");
   }
 
+  //function to update value based on id in array object
   const handleUpdate = (editValue) => {
     if(editValue) {
 

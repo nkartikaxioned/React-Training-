@@ -2,6 +2,7 @@ import { FaRegNoteSticky } from "react-icons/fa6";
 
 export const TodoInput = ({todoValue, setTodoValue, todoArray, setTodoArray, getFormatedDate}) => {
 
+  //functionality to set and display value 
   const handleTodoValue = (value) => {
     setTodoValue({
       id: Date.now(),
@@ -11,6 +12,7 @@ export const TodoInput = ({todoValue, setTodoValue, todoArray, setTodoArray, get
     });
   }
 
+  //function to handle submit and new add object to array
   const handleTodoSubmit = (todoValue) => {
     const {id,content,checked,date} = todoValue;
 
