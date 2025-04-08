@@ -49,7 +49,7 @@ const filteredTodos = todoArray.filter((todo) => {
 
 localStorage.setItem(listKey, JSON.stringify(todoArray));
   return (
-    <div className="h-screen flex flex-col justify-center items-center">
+    <div className="h-screen flex flex-col justify-start pt-5! items-center">
       <h1>TODO LIST</h1>
       <div className="flex flex-row justify-between w-4/12 max-w-4xl mb-5!">
         <div>
